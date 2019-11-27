@@ -805,11 +805,14 @@ select {
     -webkit-flex-basis: 360px;
         -ms-flex-preferred-size: 360px;
             flex-basis: 360px;
-    text-align: center; }
+    text-align: center;
+    padding: 0 5px; }
     .ba-advantages__item h4 {
       margin-top: 25px; }
     .ba-advantages__item P {
       color: #78909c; }
+  .ba-advantages__img {
+    height: 80px; }
   .ba-advantages .ba-button__started {
     background-color: #00E9B5;
     text-align: center; }

@@ -298,12 +298,16 @@ textarea {
   &__item{
     flex-basis: 360px;
     text-align: center;
+    padding: 0 5px;
     h4 {
       margin-top: 25px;
     }
     P {
       color: #78909c;
     }
+  }
+  &__img{
+    height: 80px;
   }
   .ba-button__started{
     background-color: #00E9B5;
