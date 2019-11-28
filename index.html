@@ -125,7 +125,185 @@
             </div>
         </section>
         <!--        //ba-achievements -->
+
+        <section class="ba-services">
+            <div class="ba-container">
+                <h2 class="ba-services__title">Services</h2>
+                <p class="ba-services__subtitile">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores beatae delectus
+                    explicabo, inventore nihil veniam vero! Incidunt.
+                </p>
+
+                <div class="ba-service-block">
+                    <div class="ba-service-block__header">
+                        <div class="ba-service-block__name">
+                            <img src="img/trending_up.png" alt="Statistics">
+                            <p>Statistics</p>
+                        </div>
+                        <button onclick="openStatFunction()" class="ba-service-block__arrow">
+                            <img src="img/arrow_drop_down.png" alt="drop down">
+                        </button>
+                    </div>
+                    <div id="statisticsBlock" class="ba-service-block__main ba-service-block__view-no">
+                        <img src="img/services.jpg" alt="Services" class="ba-service-block__img">
+                        <div class="ba-service-block__text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </p>
+                            <p>
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ba-service-block">
+                    <div class="ba-service-block__header">
+                        <div class="ba-service-block__name">
+                            <img src="img/mail.png" alt="Inbox">
+                            <p>Inbox</p>
+                        </div>
+                        <button onclick="openInboxFunction()" class="ba-service-block__arrow">
+                            <img src="img/arrow_drop_down.png" alt="drop down">
+                        </button>
+                    </div>
+                    <div id="inboxBlock" class="ba-service-block__main ba-service-block__view-no">
+                        <img src="img/services.jpg" alt="Services" class="ba-service-block__img">
+                        <div class="ba-service-block__text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </p>
+                            <p>
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ba-service-block">
+                    <div class="ba-service-block__header">
+                        <div class="ba-service-block__name">
+                            <img src="img/group.png" alt="Team">
+                            <p>Team</p>
+                        </div>
+                        <button onclick="openTeamFunction()" class="ba-service-block__arrow">
+                            <img src="img/arrow_drop_down.png" alt="drop down">
+                        </button>
+                    </div>
+                    <div id="teamBlock" class="ba-service-block__main ba-service-block__view-no">
+                        <img src="img/services.jpg" alt="Services" class="ba-service-block__img">
+                        <div class="ba-service-block__text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </p>
+                            <p>
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ba-service-block">
+                    <div class="ba-service-block__header">
+                        <div class="ba-service-block__name">
+                            <img src="img/settings.png" alt="Settings">
+                            <p>Settings</p>
+                        </div>
+                        <button onclick="openSettingsFunction()" class="ba-service-block__arrow">
+                            <img src="img/arrow_drop_down.png" alt="drop down">
+                        </button>
+                    </div>
+                    <div id="settingsBlock" class="ba-service-block__main ba-service-block__view-no">
+                        <img src="img/services.jpg" alt="Services" class="ba-service-block__img">
+                        <div class="ba-service-block__text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </p>
+                            <p>
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ba-service-block">
+                    <div class="ba-service-block__header">
+                        <div class="ba-service-block__name">
+                            <img src="img/rss_feed.png" alt="Feed">
+                            <p>Feed</p>
+                        </div>
+                        <button onclick="openFeedFunction()" class="ba-service-block__arrow">
+                            <img src="img/arrow_drop_down.png" alt="drop down">
+                        </button>
+                    </div>
+                    <div id="feedBlock" class="ba-service-block__main ba-service-block__view-no">
+                        <img src="img/services.jpg" alt="Services" class="ba-service-block__img">
+                        <div class="ba-service-block__text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </p>
+                            <p>
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.ba-services -->
 	</main>
 
+    <script>
+        function openFeedFunction() {
+            var element1 = document.getElementById('feedBlock');
+            if (element1.classList.contains('ba-service-block__view-no')){
+                element1.classList.remove('ba-service-block__view-no');
+            } else {
+                element1.classList.add('ba-service-block__view-no');
+            }
+        }
+
+        function openSettingsFunction() {
+            var element2 = document.getElementById('settingsBlock');
+            if (element2.classList.contains('ba-service-block__view-no')){
+                element2.classList.remove('ba-service-block__view-no');
+            } else {
+                element2.classList.add('ba-service-block__view-no');
+            }
+        }
+
+        function openTeamFunction() {
+            var element3 = document.getElementById('teamBlock');
+            if (element3.classList.contains('ba-service-block__view-no')){
+                element3.classList.remove('ba-service-block__view-no');
+            } else {
+                element3.classList.add('ba-service-block__view-no');
+            }
+        }
+        function openInboxFunction() {
+            var element4 = document.getElementById('inboxBlock');
+            if (element4.classList.contains('ba-service-block__view-no')){
+                element4.classList.remove('ba-service-block__view-no');
+            } else {
+                element4.classList.add('ba-service-block__view-no');
+            }
+        }
+        function openStatFunction() {
+            var element5 = document.getElementById('statisticsBlock');
+            if (element5.classList.contains('ba-service-block__view-no')){
+                element5.classList.remove('ba-service-block__view-no');
+            } else {
+                element5.classList.add('ba-service-block__view-no');
+            }
+        }
+
+
+    </script>
 </body>
 </html>
