@@ -411,6 +411,16 @@ textarea {
       font-weight: bold;
     }
   }
+  &__arrow {
+    border: none;
+    box-shadow: none;
+    padding: 0 10px;
+    transition: transform .4s ease-in;
+    outline: none;
+    &:hover {
+      transform: scale(2);
+    }
+  }
   &__main{
     display: flex;
   }
