@@ -9,6 +9,7 @@ $title-color-gray: #b0bec5;
 $text-color-light: #ffffff;
 $text-color-dark: #061e37;
 $text-color-gray: #b0bec5;
+$review-text-color: #78909c;
 
 $base-font-family: 'Raleway', sans-serif;
 
@@ -45,10 +46,18 @@ h4{
   color: $title-color-dark;
   line-height: 1.25;
 }
+h5 {
+  font: 700 18px/1 $base-font-family;
+  color: $title-color-dark;
+  line-height: 1.25;
+}
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
 a,
 input[type="submit"],
 input[type="button"],
@@ -67,6 +76,13 @@ button,
 	border-radius: 5px;
 	padding: 10px 20px;
 	box-shadow: 0 8px 18px -10px #051E38;
+}
+.ba-button__started--reviews {
+  background: #001835;
+  padding: 20px 25px;
+  &:hover {
+    background-color: #00E9B5;
+  }
 }
 input[type="submit"]:hover,
 input[type="button"]:hover,
@@ -450,3 +466,195 @@ textarea {
   }
 
 }
+
+//ba-customers-reviews
+.ba-customers-reviews {
+  background: #00D5CD url(../img/reviewbg.jpg) center center  no-repeat;
+  background-color: rgba(0, 213, 205, .5);
+  background-size: cover;
+  padding: 40px 0;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 213, 205, .9);
+  }
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+  }
+  &__main {
+    padding: 30px 0;
+  }
+
+
+  &__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: 1100px){
+      flex-direction: column;
+    }
+  }
+
+  &__title{
+    color: $title-color-light;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 80px;
+    margin-bottom: 25px;
+  }
+  &__text {
+    max-width: 555px;
+    margin-bottom: 75px;
+  }
+  &__img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    img {
+
+    }
+  }
+  &__name{
+    margin-bottom: 15px;
+  }
+  &__answer {
+    font-style: italic;
+  }
+  &__review{
+    max-width: 650px;
+    background-color: $title-color-light;
+    border-radius: 10px;
+    padding: 33px;
+    color: $review-text-color;
+  }
+
+  .ba-col-46 {
+    width: 46%;
+  }
+  .ba-col-54 {
+    width: 54%;
+  }
+
+  .ba-slider__arrow{
+    width: 27px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 0;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    left: 50%;
+    transition: transform .3s ease-in;
+    &--prev{
+      background-image: url(../img/preview-arrow-top.png);
+      top: -5px;
+    }
+    &--next{
+      background-image: url(../img/preview-arrow-bottom.png);
+      bottom: 0;
+    }
+    &:hover{
+      transform: scale(1.5);
+    }
+  }
+
+  @media screen and (max-width: 800px){
+    .ba-col-46, .ba-col-54 {
+      width: 100%;
+    }
+  }
+}
+
+
+//ba-team
+.ba-team {
+  padding: 100px 0 90px;
+  &__title{
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+  &__text {
+    text-align: center;
+    color: $text-color-gray;
+    max-width: 565px;
+    margin: 0 auto;
+    margin-bottom: 65px;
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__img{
+    margin-left: 30px;
+    border-radius: 50%;
+    img{
+
+    }
+    &--active {
+      img {
+        border-radius: 50%;
+        border: 10px solid #ffffff;
+        box-shadow: 0 0 10px 4px $text-color-gray;
+      }
+    }
+  }
+  &__img:first-child{
+    margin-left: 0;
+  }
+  &__img--active {
+    border: 20px solid #ffffff;
+
+  }
+
+  &__description{
+    max-width: 650px;
+    margin: 0 auto;
+
+  }
+  &__name {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+  &__portrait {
+    color: #90a4ae;
+    text-align: center;
+  }
+  &__social{
+
+  }
+  &__sociallist{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  &__socialitem{
+    margin-left: 25px;
+  }
+  &__socialitem:first-child{
+    margin-left: 0;
+  }
+  &__sociallink img {
+    transition: transform .3s ease-in;
+  }
+  &__sociallink:hover img{
+    transform: scale(1.3);
+  }
+}
+
