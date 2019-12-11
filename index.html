@@ -9,6 +9,7 @@
 	<meta name="description" content="" />
 	<link rel="icon" href="favicon.png"/>
 	<link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 </head>
 <body>
@@ -23,6 +24,7 @@
                             <img src="img/logo.png" alt="Logo">
                         </a>
                         <nav class="ba-nav">
+                            <a href="#" class="ba-nav__shadow-menu-icon"></a>
                             <ul class="ba-menu">
                                 <li class="ba-menu__item"><a href="#" class="ba-menu__link">Home</a></li>
                                 <li class="ba-menu__item"><a href="#" class="ba-menu__link ba-menu__link--active">Service</a></li>
@@ -36,7 +38,7 @@
                     <div class="ba-intro__main">
 <!--                        <div class="ba-row">-->
                             <div class="ba-intro__col">
-                                <h1 class="ba-intro__title">Lorem ipsum dolor sit amet</h1>
+                                <h1 class="ba-intro__title animated fadeInLeft delay-2s">Lorem ipsum dolor sit amet</h1>
                                 <p class="ba-intro__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                                     do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam,
                                     quis nostrud exercitation ullamc</p>
@@ -45,7 +47,7 @@
                                 <a href="#" class="ba-button ba-button__tryfree">Try for free</a>
                             </div>
                             <div class="ba-intro__col">
-                                <div class="ba-intro__video">
+                                <div class="ba-intro__video animated fadeInRightBig delay-1s">
                                     <iframe  src="https://www.youtube.com/embed/HWjCStB6k4o"
                                             frameborder="0"
                                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -63,7 +65,7 @@
         <section class="ba-advantages">
             <div class="ba-container">
                 <div class="ba-advantages__header">
-                    <h2 class="ba-advantages__title">Easy & Useful</h2>
+                    <h2 class="ba-advantages__title animated fadeInRightBig wow">Easy & Useful</h2>
                     <h3 class="ba-advantages__subtitle">Project Management Tool</h3>
                     <p class="ba-advantages__text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -71,19 +73,19 @@
                     </p>
                 </div>
                 <div class="ba-advantages__row">
-                    <div class="ba-advantages__item">
+                    <div class="ba-advantages__item animated fadeInRightBig wow">
                         <img src="img/advantageitem1.png" alt="item1" class="ba-advantages__img">
                         <h4>Title goes here</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="ba-advantages__item">
+                    <div class="ba-advantages__item animated fadeInRightBig wow" data-wow-delay=".3s">
                         <img src="img/advantageitem2.png" alt="item1" class="ba-advantages__img">
                         <h4>Title goes here</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="ba-advantages__item">
+                    <div class="ba-advantages__item animated fadeInRightBig wow" data-wow-delay=".7s">
                         <img src="img/advantageitem3.png" alt="item1" class="ba-advantages__img">
                         <h4>Title goes here</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -98,25 +100,25 @@
         <!-- /.ba-advantages       -->
         <section class="ba-achivments">
             <div class="ba-achivments__row">
-                <div class="ba-achivments__item ba-achivments__item--business">
+                <div class="ba-achivments__item ba-achivments__item--business animated lightSpeedIn wow" data-wow-delay=".1s">
                     <div class="ba-achivments__img">
                         <img src="img/business.png" alt="Business">
                     </div>
                     <p>12000+<br/>Business</p>
                 </div>
-                <div class="ba-achivments__item ba-achivments__item--downloads">
+                <div class="ba-achivments__item ba-achivments__item--downloads animated lightSpeedIn wow" data-wow-delay=".3s">
                     <div class="ba-achivments__img">
                         <img src="img/downloads.png" alt="Downloads">
                     </div>
                     <p>12000+<br/>Business</p>
                 </div>
-                <div class="ba-achivments__item ba-achivments__item--person">
+                <div class="ba-achivments__item ba-achivments__item--person animated lightSpeedIn wow" data-wow-delay=".6s">
                     <div class="ba-achivments__img">
                         <img src="img/person.png" alt="Person">
                     </div>
                     <p>12000+<br/>Business</p>
                 </div>
-                <div class="ba-achivments__item ba-achivments__item--prousers">
+                <div class="ba-achivments__item ba-achivments__item--prousers animated lightSpeedIn wow" data-wow-delay=".9s">
                     <div class="ba-achivments__img">
                         <img src="img/prousers.png" alt="Prousers">
                     </div>
@@ -427,6 +429,7 @@
                         <img src="img/footerLogo.png" alt="Logo">
                     </a>
                     <nav class="ba-nav">
+                        <a href="#" class="ba-nav__shadow-menu-icon"></a>
                         <ul class="ba-menu">
                             <li class="ba-menu__item">
                                 <a href="#" class="ba-menu__link">Home</a>
@@ -487,9 +490,12 @@
         </footer>
         <!-- /.ba-footer -->
 	</main>
-
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW({
+            mobile: false
+        }).init();
+    </script>
     <script src="js/main.js"></script>
-
-
 </body>
 </html>

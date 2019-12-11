@@ -671,6 +671,9 @@ select {
   display: flex;
   list-style: none;
   margin: 0; }
+  @media screen and (max-width: 520px) {
+    .ba-menu {
+      display: none; } }
   .ba-menu__item {
     margin-left: 50px; }
     .ba-menu__item:first-child {
@@ -687,6 +690,30 @@ select {
     .ba-menu {
       margin-top: 20px;
       margin-bottom: 20px; } }
+
+.ba-nav__shadow-menu-icon {
+  position: relative;
+  text-align: center;
+  display: none;
+  width: 30px;
+  height: 30px; }
+  .ba-nav__shadow-menu-icon:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 30px;
+    height: 3px;
+    background: white;
+    box-shadow: 0 8px 0 0 white, 0 16px 0 0 white;
+    transition: background .3s ease-in, box-shadow .3s ease-in; }
+  @media screen and (max-width: 520px) {
+    .ba-nav__shadow-menu-icon {
+      display: block;
+      margin: 0 auto; } }
+  .ba-nav__shadow-menu-icon:hover:before {
+    background: green;
+    box-shadow: 0 8px 0 0 green, 0 16px 0 0 green; }
 
 .ba-button__signup {
   text-transform: lowercase;
@@ -780,6 +807,12 @@ select {
   border: none; }
   .ba-button__buy:hover {
     background-color: #ffffff; }
+  @media screen and (max-width: 365px) {
+    .ba-button__buy {
+      display: block;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 10px; } }
 
 .ba-button__tryfree {
   padding: 20px 30px;
@@ -789,6 +822,10 @@ select {
   .ba-button__tryfree:hover {
     color: #ffffff;
     background-color: #061e37; }
+  @media screen and (max-width: 365px) {
+    .ba-button__tryfree {
+      display: block;
+      margin: 0; } }
 
 .ba-advantages {
   padding: 100px 0 90px;
