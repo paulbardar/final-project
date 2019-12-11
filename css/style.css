@@ -1002,10 +1002,9 @@ select {
     @media screen and (max-width: 700px) {
       .ba-service-block__text {
         width: 100%; } }
-  .ba-service-block__view-no {
+  .ba-service-block--view-no
+  .ba-service-block__main {
     display: none; }
-  .ba-service-block__view {
-    display: block; }
 
 .ba-customers-reviews {
   background: #00D5CD url(../img/reviewbg.jpg) center center no-repeat;
