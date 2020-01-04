@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 </head>
-<body>
+<body class="ba-body-class">
 
 	<main>
 
@@ -23,8 +23,11 @@
                         <a href="#" class="ba-header__logo">
                             <img src="img/logo.png" alt="Logo">
                         </a>
+<!--                        <a href="#" class="ba-nav__shadow-menu-icon"></a>-->
+                        <a href="#" id="ba-menu-toggle" class="ba-menu-toggle">
+                            <span></span>
+                        </a>
                         <nav class="ba-nav">
-                            <a href="#" class="ba-nav__shadow-menu-icon"></a>
                             <ul class="ba-menu">
                                 <li class="ba-menu__item"><a href="#" class="ba-menu__link">Home</a></li>
                                 <li class="ba-menu__item"><a href="#" class="ba-menu__link ba-menu__link--active">Service</a></li>
@@ -284,33 +287,72 @@
                                         role="button">Previous
                                 </button>
                                 <div class="ba-customers-reviews__main">
+                                    <div class="ba-customer__slide">
+                                        <div class="ba-customers-reviews__block">
+                                            <div class="ba-customers-reviews__img">
+                                                <img src="img/customer1.png" alt="Customer1">
+                                            </div>
+                                            <div class="ba-customers-reviews__review">
+                                                <h5 class="ba-customers-reviews__name">John Doe</h5>
+                                                <p class="ba-customers-reviews__answer">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud
+                                                    exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                    <div class="ba-customers-reviews__block">
-                                        <div class="ba-customers-reviews__img">
-                                            <img src="img/customer1.png" alt="Customer1">
-                                        </div>
-                                        <div class="ba-customers-reviews__review">
-                                            <h5 class="ba-customers-reviews__name">John Doe</h5>
-                                            <p class="ba-customers-reviews__answer">Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit, sed do eiusmod tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                                nostrud
-                                                exercitation ullamco laboris nisi ut aliquip ex ea</p>
-                                        </div>
-                                    </div>
-                                    <div class="ba-customers-reviews__block">
-                                        <div class="ba-customers-reviews__img">
-                                            <img src="img/customer2.png" alt="Customer2">
-                                        </div>
-                                        <div class="ba-customers-reviews__review">
-                                            <h5 class="ba-customers-reviews__name">Khalessi</h5>
-                                            <p class="ba-customers-reviews__answer">Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit, sed do eiusmod tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                                nostrud
-                                                exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                    <div class="ba-customer__slide">
+                                        <div class="ba-customers-reviews__block">
+                                            <div class="ba-customers-reviews__img">
+                                                <img src="img/customer2.png" alt="Customer2">
+                                            </div>
+                                            <div class="ba-customers-reviews__review">
+                                                <h5 class="ba-customers-reviews__name">Khalessi</h5>
+                                                <p class="ba-customers-reviews__answer">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud
+                                                    exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
                                         </div>
                                     </div>
+
+<!--                                    Additional teamer blocks-->
+                                    <div class="ba-customer__slide">
+                                        <div class="ba-customers-reviews__block">
+                                            <div class="ba-customers-reviews__img">
+                                                <img src="img/customer1.png" alt="Customer1">
+                                            </div>
+                                            <div class="ba-customers-reviews__review">
+                                                <h5 class="ba-customers-reviews__name">John Doe</h5>
+                                                <p class="ba-customers-reviews__answer">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud
+                                                    exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ba-customer__slide">
+                                        <div class="ba-customers-reviews__block">
+                                            <div class="ba-customers-reviews__img">
+                                                <img src="img/customer2.png" alt="Customer2">
+                                            </div>
+                                            <div class="ba-customers-reviews__review">
+                                                <h5 class="ba-customers-reviews__name">Khalessi</h5>
+                                                <p class="ba-customers-reviews__answer">Lorem ipsum dolor sit amet, consectetur
+                                                    adipisicing elit, sed do eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud
+                                                    exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                                 <button type="button" class="ba-slider__arrow ba-slider__arrow--next" aria-label="Next"
                                         role="button">Next
@@ -333,23 +375,77 @@
                 </p>
                 <div class="ba-team__slider">
                     <div class="ba-team__gallery">
-                        <div class="ba-team__img">
-                            <img src="img/team2.jpg" alt="team2">
+                        <div class="ba-team__slide">
+                            <div class="ba-team__img">
+                                <img src="img/teammain.jpg" alt="Sophie Turner">
+                            </div>
                         </div>
-                        <div class="ba-team__img ba-team__img--active">
-                            <img src="img/teammain.jpg" alt="Sophie Turner">
+
+                        <div class="ba-team__slide">
+                            <div class="ba-team__img ba-team__img--active">
+                                <img src="img/teammain.jpg" alt="Sophie Turner">
+                            </div>
                         </div>
-                        <div class="ba-team__img">
-                            <img src="img/team3.jpg" alt="team3">
+
+                        <div class="ba-team__slide">
+                            <div class="ba-team__img">
+                                <img src="img/team3.jpg" alt="team3">
+                            </div>
                         </div>
+                        <div class="ba-team__slide">
+                            <div class="ba-team__img">
+                                <img src="img/team3.jpg" alt="team3">
+                            </div>
+                        </div>
+                        <div class="ba-team__slide">
+                            <div class="ba-team__img">
+                                <img src="img/team3.jpg" alt="team3">
+                            </div>
+                        </div>
+
                     </div>
                     <div class="ba-team__description">
-                        <h5 class="ba-team__name">Sophie Turner</h5>
-                        <p class="ba-team__portrait">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor incididunt
-                        </p>
+                        <div class="ba-team--desc__slide">
+                            <h5 class="ba-team__name">Sophie Turner</h5>
+                            <p class="ba-team__portrait">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt
+                            </p>
+                        </div>
+                        <div class="ba-team--desc__slide">
+                            <h5 class="ba-team__name">Sophie Turner2</h5>
+                            <p class="ba-team__portrait">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt
+                            </p>
+                        </div>
+                        <div class="ba-team--desc__slide">
+                            <h5 class="ba-team__name">Sophie Turner3</h5>
+                            <p class="ba-team__portrait">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt
+                            </p>
+                        </div>
+                        <div class="ba-team--desc__slide">
+                            <h5 class="ba-team__name">Sophie Turner4</h5>
+                            <p class="ba-team__portrait">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt
+                            </p>
+                        </div>
+                        <div class="ba-team--desc__slide">
+                            <h5 class="ba-team__name">Sophie Turner5</h5>
+                            <p class="ba-team__portrait">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magnaLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt
+                            </p>
+                        </div>
+
                     </div>
                     <div class="ba-team__social">
                         <ul class="ba-team__sociallist">
@@ -496,6 +592,8 @@
             mobile: false
         }).init();
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

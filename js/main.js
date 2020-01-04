@@ -69,9 +69,62 @@
             this.classList.toggle('ba-service-block--view-no');
         }
     }
+
+    var menuToggle = doc.querySelector('.ba-menu-toggle'),
+        body = doc.body;
+
+    menuToggle.onclick = function(event) {
+        event.preventDefault();
+        body.classList.toggle('ba-menu-opened');
+    }
+    console.log(menuToggle);
+    console.log(body);
+
 })();
 
+// ;(function($){
+//
+//     $(function() {
+//         var body = $('body'),
+//             menuToggle = $('.ba-menu-toggle');
+//
+//         menuToggle.click(function(event){
+//            event.preventDefault();
+//            body.toggleClass('ba-menu-opened');
+//         });
+//     });
+//
+// })(jQuery);
 
+//Slick Slider Team
+;(function($){
+    $(function(){
+        $('.ba-customers-reviews__main').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            vertical: true,
+            verticalSwiping: true,
+            prevArrow: $('.ba-slider__arrow--prev'),
+            nextArrow: $('.ba-slider__arrow--next')
+        });
 
+        $('.ba-team__gallery').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.ba-team__description',
+            centerMode: true,
+            centerPadding: '30px',
+            arrows: false
+        });
+        $('.ba-team__description').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            swipe: false,
+            asNavFor: '.ba-team__gallery'
+        });
+    });
 
+})(jQuery);
 

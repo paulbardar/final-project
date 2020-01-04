@@ -1,6 +1,7 @@
 @import "normalize";
 @import "layout";
 
+
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800&display=swap');
 
 $title-color-light: #ffffff;
@@ -150,6 +151,11 @@ textarea {
   @media screen and (max-width: 900px) {
     flex-direction: column;
   }
+  &__logo {
+    @media screen and (max-width: 520px) {
+      align-self: flex-start;
+    }
+  }
 }
 
 .ba-menu {
@@ -157,13 +163,16 @@ textarea {
 	list-style: none;
 	margin: 0;
     @media screen and (max-width: 520px){
-      display: none;
+      //display: none;
     }
 	&__item{
 		margin-left: 50px;
 		&:first-child {
 			margin-left: 0;
 		}
+      @media screen and (max-width: 520px) {
+        margin-left: 0;
+      }
 	}
 	&__link {
 		text-decoration: none;
@@ -180,6 +189,85 @@ textarea {
   @media screen and (max-width: 900px) {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  @media screen and (max-width: 520px) {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    background: #504d5f;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform .3s ease-in;
+  }
+
+}
+
+.ba-menu-toggle {
+  display: none;
+  @media screen and (max-width: 520px) {
+    display: block;
+    position: absolute;
+    align-self: flex-end;
+    padding: 0 20px;
+    span {
+      width: 30px;
+      height: 4px;
+      background: #ffffff;
+      position: relative;
+      display: block;
+      margin: 20px 0;
+      transition: background .3s ease-in;
+      &:before, &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 30px;
+        height: 4px;
+        background: #ffffff;
+        left: 0;
+        right: 0;
+        transition: transform .3s ease-in;
+      }
+      &:before {
+        top: -8px;
+      }
+      &:after {
+        bottom: -8px;
+      }
+    }
+
+
+
+  }
+}
+@media screen and (max-width: 520px) {
+  body {
+    transition: transform .3s ease-in;
+  }
+  .ba-menu-opened {
+    //transition: transform .3s ease-in;
+    transform: translateX(-200px);
+    overflow: hidden;
+    .ba-menu-toggle{
+      span {
+        background: transparent;
+        &:before {
+        transform: rotate(45deg);
+          top: 0;
+        }
+        &:after {
+          transform: rotate(-45deg);
+          bottom: 0;
+        }
+      }
+    }
   }
 }
 
@@ -220,6 +308,9 @@ textarea {
     &:hover{
       border-color: $text-color-dark;
     }
+  @media screen and (max-width: 520px) {
+    align-self: flex-start;
+  }
 }
 
 .ba-intro__main {
@@ -516,6 +607,11 @@ textarea {
 }
 
 //ba-customers-reviews
+
+.ba-customer__slide {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .ba-customers-reviews {
   background: #00D5CD url(../img/reviewbg.jpg) center center  no-repeat;
   background-color: rgba(0, 213, 205, .5);
@@ -536,7 +632,7 @@ textarea {
     z-index: 2;
   }
   &__main {
-    padding: 30px 0;
+    //padding: 30px 0;
   }
 
 
@@ -544,7 +640,8 @@ textarea {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
+    //margin-bottom: 30px;
+    //margin-top: 30px;
     &:last-child{
       margin-bottom: 0;
     }
@@ -611,11 +708,37 @@ textarea {
     }
     &--next{
       background-image: url(../img/preview-arrow-bottom.png);
+      background-position: 0% 45%;
       bottom: 0;
     }
     &:hover{
       transform: scale(1.5);
     }
+  }
+  .slick-arrow {
+    width: 27px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 0;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    left: 50%;
+    transition: transform .3s ease-in;
+    outline: none;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+  .slick-prev {
+    background-image: url(../img/preview-arrow-top.png);
+    top: -5px;
+  }
+  .slick-next{
+    background-image: url(../img/preview-arrow-bottom.png);
+    bottom: 0;
   }
 
   @media screen and (max-width: 800px){
@@ -627,6 +750,9 @@ textarea {
 
 
 //ba-team
+
+@import "slick.scss";
+
 .ba-team {
   padding: 100px 0 90px;
   &__title{
@@ -641,7 +767,23 @@ textarea {
     margin: 0 auto;
     margin-bottom: 65px;
   }
-
+  &__slider {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &__slide{
+    margin: 0 30px;
+    padding: 80px 0;
+  }
+  .slick-center {
+    img {
+      border-radius: 50%;
+      border: 10px solid #ffffff;
+      box-shadow: 0 0 10px 4px $text-color-gray;
+      transform: scale(2);
+      transition: transform .3s ease-in;
+    }
+  }
   &__gallery {
     display: flex;
     justify-content: center;
@@ -651,22 +793,24 @@ textarea {
   &__img{
     margin-left: 30px;
     border-radius: 50%;
+    width: 100px;
+    height: 100px;
     img{
 
     }
     &--active {
-      img {
-        border-radius: 50%;
-        border: 10px solid #ffffff;
-        box-shadow: 0 0 10px 4px $text-color-gray;
-      }
+      //img {
+      //  border-radius: 50%;
+      //  border: 10px solid #ffffff;
+      //  box-shadow: 0 0 10px 4px $text-color-gray;
+      //}
     }
   }
   &__img:first-child{
     margin-left: 0;
   }
   &__img--active {
-    border: 20px solid #ffffff;
+    //border: 20px solid #ffffff;
 
   }
 
@@ -848,4 +992,5 @@ textarea {
     }
   }
 }
+
 
